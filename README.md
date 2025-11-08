@@ -16,19 +16,19 @@
 
 The project contains one integrated template (which can be used for **PS** & **SoP**). 
 
-1. Go to the `easy_appdoc` directory and open `main.tex`.
+1. Go to the `ElegantPSoP` directory and open `main.tex`.
 
 2. Change these variables accordingly:
 
    ```latex
    % --- ESSAY DISPLAY SETTINGS ---
-   \SetStudentName{StudentName}           % Your name
+   \SetStudentName{<yourname>}           % Your name
    
    % --- CONTENT INPUT FILES --- 
-   \SetUniContentPath{content/template} % Path to the input file template.tex
+   \SetUniContentPath{content/<inputfile>} % Path to the input file <inputfile>.tex
    ```
 
-3. Open the `easy_appdoc` directory and create the `<filename>.tex` files as specified by  `\SetUniContentPath{...}`. Then set the variables and write your application document accordingly: 
+3. Open the `ElegantPSoP` directory and create the `<inputfile>.tex` files as specified by  `\SetUniContentPath{...}`. Then set the variables and write your application document accordingly: 
 
     ```latex
     \SetDocTitle{Your Document Title Here} 
@@ -38,10 +38,11 @@ The project contains one integrated template (which can be used for **PS** & **S
 
     Write your document here. 
     ```
+    Each input file corresponds to a PS or SoP for a university program.
+    
+4. To reference your papers, just add the according **BibLaTeX** citations in `ElegantPSoP/ref.bib`.
 
-4. To reference your papers, just add the according **BibLaTeX** citations in `easy_appdoc/ref.bib`.
-
-5. Build your `.pdf` file as usual.
+5. Build your `.pdf` file as usual. 
 
 ## Examples
 

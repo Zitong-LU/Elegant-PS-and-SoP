@@ -5,7 +5,7 @@
 % Copyright (c) 2024, Daize Dong
 % https://github.com/DaizeDong/Easier-PS-and-SoP
 % Copyright (c) 2025, Zitong LU
-% https://github.com/Zitong-LU/ElegantPSoP
+% https://github.com/Zitong-LU/Elegant-PS-and-SoP
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}

@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPDX-License-Identifier: BSD-3-Clause
+% Copyright (c) 2020, Salman Ahmad Faris
+% https://github.com/salfaris/EasyPS
+% Copyright (c) 2024, Daize Dong
+% https://github.com/DaizeDong/Easier-PS-and-SoP
+% Copyright (c) 2025, Zitong LU
+% https://github.com/Zitong-LU/ElegantPSoP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{ElegantPSoP}
+
+% --- ESSAY DISPLAY SETTINGS ---
+\SetStudentName{Your Name}          % Your name
+
+
+% --- CONTENT INPUT FILES ---
+\SetUniContentPath{content/template}        % Path to the input file 
+% You can set DocTitle, ProgramName, and UniversityName in the content files. 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+% \SetDocTitle{Personal Statement}          % Title of the document: PS, SoP, etc
+% \SetProgramName{PhD Program in Cooking}   % Program you're applying for
+% \SetUniversityName{Peking University}     % University name
+% \SetUniversityAbbr{UoBB}                  % University abbreviation (default as the university name if not set)
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+
+% --- Reference ---
+\addbibresource[location=local]{ref.bib} % biblatex
+
+
+% CONTENT
+\begin{document}
+
+\maketitle
+
+\input{\GetUniContentPath}
+
+
+% \newpage
+% \nocite{*} % show all the references 
+\printbibliography[heading=bibintoc, title=Reference]
+% \AtEndDocument{\footnotetext{* denotes equal contribution.}}
+\end{document}

@@ -2,7 +2,7 @@
 
 **ElegantPSoP** is an enhanced version of [EasierPS & EasierSoP](https://github.com/DaizeDong/Easier-PS-and-SoP) and [EasyPS](https://github.com/salfaris/EasyPS), featuring improved display and extended functionality. This project provides simple and elegant [LaTeX](https://www.latex-project.org/get/) templates for managing Personal Statements (PS) and Statements of Purpose (SoP) across multiple graduate school applications, offering a clean and organized way to handle multiple essays.
 
-![example](example/uni1_SoP.pdf)
+[An example of SoP](example/uni1_SoP.pdf)
 
 ### Table of contents
 

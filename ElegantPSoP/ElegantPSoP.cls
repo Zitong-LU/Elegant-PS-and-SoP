@@ -33,7 +33,7 @@
 
 % BASIC INFO
 \def\@DocTitle{{\color{red}Set Your Document Title in the Content}}
-\newcommand*{\SetDocTitle}[1]{\def\@DocTitle{#1}}
+\newcommand{\SetDocTitle}[1]{\def\@DocTitle{#1}}
 \newcommand*{\GetDocTitle}{\@DocTitle}
 \def\@StudentName{{\color{red}Set Your Student Name}}
 \newcommand*{\SetStudentName}[1]{\def\@StudentName{#1}}
@@ -65,13 +65,16 @@
     a4paper, 
     includehead, 
     margin=1.0in, 
-    headheight = 12pt,  % Adjust the height of the header
+    headheight = 14.5pt,  % Adjust the height of the header
     headsep = 18pt,     % Space between the header and content
     heightrounded, 
     % showframe
     } % Page margins, change as you need
-\setlength{\parskip}{6pt}     % Space between paragraphs
+
+% \onehalfspacing              % Line spacing
 \linespread{1.5}               % Line spacing
+\setlength{\parskip}{6pt}     % Space between paragraphs
+
 
 % HEADER AND FOOTER SETTINGS
 \pagestyle{fancy}               % Use fancy headers/footers
@@ -81,20 +84,46 @@
 \fancyfoot[C]{\thepage}         % Add a page number in the footer 
 
 % HEADER EXPANSION FOR FIRST PAGE
+
+
+\newlength{\HTitle} %14.17232
+\settoheight{\HTitle}{
+    \begin{minipage}[b]{\textwidth}
+        \centering {\LARGE \textsc{\GetDocTitle}}
+    \end{minipage}
+}
+
+\newlength{\HFirstPageHead} %57.67232
+\settoheight{\HFirstPageHead}{
+    \begin{minipage}[b]{\textwidth}
+        \begin{minipage}[b]{\textwidth}
+            \centering {\LARGE \textsc{\GetDocTitle}}
+        \end{minipage} 
+        \ \\ 
+        \null\hfill \GetUniversityName\\
+        \GetStudentName \hfill \GetProgramName
+    \end{minipage}
+}
+
+
 \fancypagestyle{plain}{%
-    \fancyhead{
-        \centering \LARGE \textsc{\GetDocTitle}\\ 
-        \hfill {\normalsize \GetUniversityName}\\
-        \normalsize\GetStudentName \hfill \GetProgramName % \vspace{-44pt}
-    } 
+    \fancyhead{ 
+    \begin{minipage}[b]{\textwidth}
+        \centering {\LARGE \textsc{\GetDocTitle}}
+    \end{minipage} 
+        \ \\ 
+        \null\hfill \GetUniversityName\\
+        \GetStudentName \hfill \GetProgramName
+    }   
 }
 
 \def\@maketitle{%
-  \newpage 
-  \null
-  \vskip 16.25pt % 44pt - \texttt{\the\baselineskip} - \texttt{\the\parskip} = 44 pt - 21.75pt - 6pt 
+    \newpage
+    \null
+    \vspace*{\dimexpr \HFirstPageHead -\baselineskip - \headheight\relax}
 }
-  
+
+
 
 
 % CITATION SETTINGS

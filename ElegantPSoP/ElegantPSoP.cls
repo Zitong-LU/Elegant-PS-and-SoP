@@ -41,6 +41,9 @@
 \def\@ProgramName{{\color{red}Set Your Program Name in the Content}}
 \newcommand*{\SetProgramName}[1]{\def\@ProgramName{#1}}
 \newcommand*{\GetProgramName}{\@ProgramName}
+\def\@ProgramAbbr{\@ProgramName}
+\newcommand*{\SetProgramAbbr}[1]{\def\@ProgramAbbr{#1}}
+\newcommand*{\GetProgramAbbr}{\@ProgramAbbr}
 \def\@UniversityName{{\color{red}Set Your University Name in the Content}}
 \newcommand*{\SetUniversityName}[1]{\def\@UniversityName{#1}}
 \newcommand*{\GetUniversityName}{\@UniversityName} 
